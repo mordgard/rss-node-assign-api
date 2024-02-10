@@ -2,8 +2,12 @@
   "name": "rss-node-assign-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/index.js",
+  "type": "module",
   "scripts": {
+    "start": "",
+    "dev": "cross-env NODE_ENV=development nodemon",
+    "build": "",
     "test": "jest"
   },
   "repository": {
@@ -15,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/mordgard/rss-node-assign-api/issues"
   },
-  "homepage": "https://github.com/mordgard/rss-node-assign-api#readme"
+  "homepage": "https://github.com/mordgard/rss-node-assign-api#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
 }
