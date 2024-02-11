@@ -1,6 +1,6 @@
 import { v1 } from "uuid";
 
-type User = {
+export type User = {
   id: string;
   username: string;
   age: number;
@@ -21,4 +21,11 @@ export const findOne = async (id: string): Promise<User | undefined> => {
   } else {
     return Promise.reject(`Not found: ${id}`);
   }
+};
+
+export const create = (body: Omit<User, "id">) => {
+  const user: User = { ...body, id: v1() };
+  DATABASE.push(user);
+
+  return Promise.resolve(user);
 };
